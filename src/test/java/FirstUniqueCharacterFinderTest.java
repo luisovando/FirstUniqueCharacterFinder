@@ -23,4 +23,12 @@ public class FirstUniqueCharacterFinderTest {
 
         assertEquals(expected, FirstUniqueCharacterFinder.findFirstUniqueChar(input));
     }
+
+    @Test
+    public void testLastCharacterIsUnique() {
+        String input = "aabbccz";
+        char expected = 'z';
+
+        assertEquals(expected, FirstUniqueCharacterFinder.findFirstUniqueChar(input));
+    }
 }
