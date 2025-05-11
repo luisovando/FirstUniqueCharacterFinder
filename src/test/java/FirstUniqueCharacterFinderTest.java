@@ -17,6 +17,30 @@ public class FirstUniqueCharacterFinderTest {
     }
 
     @Test
+    public void testInputIsNull() {
+        String input = null;
+        char expected = '\0';
+
+        assertEquals(expected, FirstUniqueCharacterFinder.findFirstUniqueChar(input));
+    }
+
+    @Test
+    public void testInputOnlySpaces() {
+        String input = "     ";
+        char expected = '\0';
+
+        assertEquals(expected, FirstUniqueCharacterFinder.findFirstUniqueChar(input));
+    }
+
+    @Test
+    public void testInputOnlySpecialCharactersRepeated() {
+        String input = "!!@@##";
+        char expected = '\0';
+
+        assertEquals(expected, FirstUniqueCharacterFinder.findFirstUniqueChar(input));
+    }
+
+    @Test
     public void testAllUniqueCharacters() {
         String input = "abcd";
         char expected = 'a';
