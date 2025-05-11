@@ -87,4 +87,12 @@ public class FirstUniqueCharacterFinderTest {
 
         assertEquals(expected, FirstUniqueCharacterFinder.findFirstUniqueChar(input));
     }
+
+    @Test
+    public void testMixedLettersAndSymbols() {
+        String input = "a!a@b#b$%";
+        char expected = '!';
+
+        assertEquals(expected, FirstUniqueCharacterFinder.findFirstUniqueChar(input));
+    }
 }
