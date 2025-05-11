@@ -1,21 +1,18 @@
-import java.util.HashMap;
+import java.util.LinkedHashMap;
+import java.util.Map;
 
 public class FirstUniqueCharacterFinder {
     public static char findFirstUniqueChar(String input) {
         if (input == null || input.trim().isEmpty()) return '\0';
 
-        HashMap<Character, Integer> map = new HashMap<>();
+        Map<Character, Integer> map = new LinkedHashMap<>();
 
-        for (int i = 0; i < input.length(); i++) {
-            char c = input.charAt(i);
+        for (char c : input.toCharArray()) {
             map.put(c, map.getOrDefault(c, 0) + 1);
         }
 
-        for (int j = 0; j < input.length(); j++) {
-            char c = input.charAt(j);
-            if (map.get(c) == 1) {
-                return c;
-            }
+        for (Map.Entry<Character, Integer> entry : map.entrySet()) {
+            if (entry.getValue() == 1) return entry.getKey();
         }
 
         return '\0';
