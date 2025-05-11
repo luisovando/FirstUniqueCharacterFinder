@@ -55,4 +55,12 @@ public class FirstUniqueCharacterFinderTest {
 
         assertEquals(expected, FirstUniqueCharacterFinder.findFirstUniqueChar(input));
     }
+
+    @Test
+    public void testSingleCharacterString() {
+        String input = "l";
+        char expected = 'l';
+
+        assertEquals(expected, FirstUniqueCharacterFinder.findFirstUniqueChar(input));
+    }
 }
