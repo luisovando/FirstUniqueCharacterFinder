@@ -31,4 +31,12 @@ public class FirstUniqueCharacterFinderTest {
 
         assertEquals(expected, FirstUniqueCharacterFinder.findFirstUniqueChar(input));
     }
+
+    @Test
+    public void testMiddleCharacterIsUnique() {
+        String input = "aabbcddd";
+        char expected = 'c';
+
+        assertEquals(expected, FirstUniqueCharacterFinder.findFirstUniqueChar(input));
+    }
 }
